@@ -24,6 +24,8 @@ gem 'open_weather', git: 'https://github.com/bcrivelaro/open_weather', branch: '
 gem 'twitter', '~> 7.0.0'
 
 group :development, :test do
+  gem 'rspec-rails', '4.0.1'
+  gem 'rails-controller-testing', '1.0.5'
   gem 'pry-rails', '0.3.9'
 end
 
