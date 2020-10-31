@@ -1,24 +1,56 @@
-# README
+### Instructions
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Get your .env:
 
-Things you may want to cover:
+```bash
+  $ cp .env.example .env
+```
 
-* Ruby version
+Then replace the vaules according to your OpenWeather and Twitter keys.
 
-* System dependencies
+Install dependencies:
 
-* Configuration
+```bash
+  $ bundle install
+```
 
-* Database creation
+Then start server:
 
-* Database initialization
+```bash
+  $ rails server
+```
 
-* How to run the test suite
+If you want to run tests, run:
 
-* Services (job queues, cache servers, search engines, etc.)
+```bash
+  $ rspec
+```
 
-* Deployment instructions
+### Usage
 
-* ...
+Make a POST request to `/tweets` passing `q`, `id` or `zip` and `country_code` as parameters:
+
+```bash
+  $ curl --location --request POST 'localhost:3000/tweets' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+      "q": "Campinas"
+    }'
+```
+
+```bash
+  $ curl --location --request POST 'localhost:3000/tweets' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+      "id": 3467865
+    }'
+```
+
+```bash
+  $ curl --location --request POST 'localhost:3000/tweets' \
+    --header 'Content-Type: application/json' \
+    --data-raw '{
+      "zip": "10001",
+      "country_code": "us"
+    }'
+```
