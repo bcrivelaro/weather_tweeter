@@ -1,4 +1,4 @@
-class TweetController < ApplicationController
+class TweetsController < ApplicationController
   def create
     tweet = WeatherTweetterService.call(location_params)
 
