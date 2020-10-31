@@ -23,7 +23,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
-gem 'open_weather', git: 'https://github.com/bcrivelaro/open_weather', branch: 'main'
+gem 'open_weather', git: 'https://github.com/bcrivelaro/open_weather', tag: '0.1.0'
 gem 'twitter', '~> 7.0.0'
 
 group :development, :test do

@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/bcrivelaro/open_weather
   revision: c655b50161c4cad61036c4821d5ef5d6aa7a56de
-  branch: main
+  tag: 0.1.0
   specs:
     open_weather (0.1.0)
       activesupport (~> 6.0.3.4)
