@@ -1,8 +1,13 @@
 class TweetsController < ApplicationController
   def create
-    tweet = WeatherTweetterService.call(location_params)
+    if location_params.keys.blank?
+      render json: { error: 'provide a valid param to search a city' },
+             status: :bad_request 
+    else
+      tweet = WeatherTweetterService.call(location_params)
 
-    render json: { tweet: tweet }, status: :ok
+      render json: { tweet: tweet }, status: :ok
+    end
   end
 
   private
